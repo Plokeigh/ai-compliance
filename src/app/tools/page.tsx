@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, Star, ArrowUpRight, Shield } from 'lucide-react';
+import { Search, Star, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 // Mock data - replace with your actual data
 const tools = [
@@ -11,7 +12,7 @@ const tools = [
     rating: 4.8,
     reviews: 128,
     features: ["Auto-documentation", "Control testing", "Risk assessment"],
-    image: "/api/placeholder/400/200"
+    image: "https://placehold.co/400x200"
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ const tools = [
     rating: 4.6,
     reviews: 95,
     features: ["Report automation", "Evidence collection", "Gap analysis"],
-    image: "/api/placeholder/400/200"
+    image: "https://placehold.co/400x200"
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const tools = [
     rating: 4.7,
     reviews: 156,
     features: ["Process mapping", "Requirement tracking", "Audit preparation"],
-    image: "/api/placeholder/400/200"
+    image: "https://placehold.co/400x200"
   }
 ];
 
@@ -81,7 +82,15 @@ export default function ToolsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool) => (
             <div key={tool.id} className="bg-white rounded-lg shadow-md p-6">
-              <img src={tool.image} alt={tool.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src={tool.image}
+                  alt={tool.title}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{tool.title}</h3>
               <p className="text-gray-600 mb-4">{tool.description}</p>
               <div className="flex items-center mb-4">

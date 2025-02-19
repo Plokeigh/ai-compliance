@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, Tag, Calendar } from 'lucide-react';
+import { Search } from 'lucide-react';
+import Image from 'next/image';
 
 // Mock data - replace with your actual data
 const articles = [

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Clock, PlayCircle } from 'lucide-react';
+import Image from 'next/image';
 
 // Mock data - replace with your actual data
 const tutorials = [
@@ -74,16 +75,15 @@ export default function TutorialsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tutorials.map((tutorial) => (
-            <div key={tutorial.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="relative">
-                <img
-                  src={tutorial.thumbnail}
+            <div key={tutorial.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="relative w-full h-48">
+                <Image
+                  src={tutorial.thumbnail || "https://placehold.co/400x200"}
                   alt={tutorial.title}
-                  className="w-full h-48 object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                  <PlayCircle className="h-16 w-16 text-white" />
-                </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
