@@ -10,11 +10,16 @@ export default function HomePage() {
       <div className="relative">
         <div className="absolute inset-0">
           <Image
-            className="w-full h-full object-cover opacity-50 transition-opacity duration-300"
-            src="/images/soxhero1.png"
+            className="w-full h-full object-cover object-center opacity-50 transition-opacity duration-300"
+            src="/images/soxhero4.png"
             alt="AI-powered compliance solutions visualization"
             fill
             priority
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
           />
         </div>
         <div className="relative max-w-7xl pl-8 pr-4 sm:pr-6 lg:pr-8 py-24">
@@ -27,43 +32,33 @@ export default function HomePage() {
               Streamline your SOX, SOC, and ISO compliance processes with cutting-edge AI solutions.
               Save time, reduce errors, and stay ahead of regulatory requirements with intelligent automation.
             </p>
-            <div className="flex gap-6">
-              <Link
-                href="/tutorials"
-                className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Featured Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Latest Updates */}
-          <div className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-            <h2 className="text-2xl font-bold text-teal-900 mb-6 flex items-center">
-              Latest Updates
-              <span className="ml-2 px-3 py-1 bg-cyan-100 text-cyan-600 text-sm rounded-full">New</span>
-            </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+          {/* Tools */}
+          <div className="bg-white rounded-lg shadow-lg p-6 px-8 hover:shadow-xl transition-shadow duration-300 min-h-[280px]">
+            <h2 className="text-2xl font-bold text-teal-900 mb-6">Tools</h2>
             <div className="space-y-6">
-              <div className="border-l-4 border-cyan-600 pl-4 hover:border-cyan-700 transition-colors">
-                <h3 className="font-semibold text-teal-900 hover:text-cyan-600 transition-colors">New AI Tools for SOX Compliance</h3>
-                <p className="text-teal-700 mt-2">Discover how AI can streamline your SOX documentation process.</p>
+              <div className="group cursor-pointer">
+                <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">Control Testing Assistant</h3>
+                <p className="text-teal-700 mt-2">AI-powered tool for testing and validating controls efficiently.</p>
+                <div className="mt-2 w-16 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </div>
-              <div className="border-l-4 border-cyan-600 pl-4 hover:border-cyan-700 transition-colors">
-                <h3 className="font-semibold text-teal-900 hover:text-cyan-600 transition-colors">ISO Compliance Guide</h3>
-                <p className="text-teal-700 mt-2">Learn about AI-powered solutions for ISO compliance.</p>
+              <div className="group cursor-pointer">
+                <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">Documentation Generator</h3>
+                <p className="text-teal-700 mt-2">Automatically generate compliant documentation with AI assistance.</p>
+                <div className="mt-2 w-16 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </div>
             </div>
             <Link
-              href="/articles"
+              href="/tools"
               className="inline-flex items-center mt-6 text-cyan-600 hover:text-cyan-700 font-semibold group"
             >
-              View all updates
+              View all tools
               <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -93,7 +88,7 @@ export default function HomePage() {
           </div>
 
           {/* Featured Articles */}
-          <div className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+          <div className="bg-white rounded-lg shadow-lg p-6 px-8 hover:shadow-xl transition-shadow duration-300 min-h-[280px]">
             <h2 className="text-2xl font-bold text-teal-900 mb-6">Articles</h2>
             <div className="space-y-6">
               <div className="group cursor-pointer">
