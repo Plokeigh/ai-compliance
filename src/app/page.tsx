@@ -61,7 +61,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <div className="group">
                 <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">Getting Started with AI in SOX</h3>
-                <p className="text-gray-600 mt-1">A beginner's guide to implementing AI in your SOX compliance.</p>
+                <p className="text-gray-600 mt-1">A beginner&apos;s guide to implementing AI in your SOX compliance.</p>
               </div>
               <div className="group">
                 <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">SOC Report Automation</h3>
