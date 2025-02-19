@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Clock, PlayCircle } from 'lucide-react';
+import { Search, Clock } from 'lucide-react';
 import Image from 'next/image';
 
 // Mock data - replace with your actual data

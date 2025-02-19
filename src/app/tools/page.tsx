@@ -81,7 +81,7 @@ export default function ToolsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool) => (
-            <div key={tool.id} className="bg-white rounded-lg shadow-md p-6">
+            <div key={tool.id} className="bg-card text-card-foreground rounded-lg shadow-md p-6 hover-card">
               <div className="relative w-full h-48 mb-4">
                 <Image
                   src={tool.image}

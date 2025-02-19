@@ -4,8 +4,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'placehold.co',
       },
+      // Add any other image domains you might use
+      {
+        protocol: 'https',
+        hostname: 'placekitten.com', // Alternative placeholder service
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos', // Another alternative
+      }
     ],
   },
 }
