@@ -69,7 +69,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <div className="group cursor-pointer">
                 <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">Getting Started with AI in SOX</h3>
-                <p className="text-teal-700 mt-2">A beginner's guide to implementing AI in your SOX compliance.</p>
+                <p className="text-teal-700 mt-2">A beginner&apos;s guide to implementing AI in your SOX compliance.</p>
                 <div className="mt-2 w-16 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </div>
               <div className="group cursor-pointer">
