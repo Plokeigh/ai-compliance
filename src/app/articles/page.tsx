@@ -4,6 +4,15 @@ import Image from 'next/image';
 // Mock data - replace with your actual data
 const articles = [
   {
+    id: "sec-sox-2025",
+    title: "How Recent SEC Pronouncements Will Shape SOX Compliance in 2025",
+    excerpt: "The Securities and Exchange Commission (SEC) has made several key pronouncements over the past year that will significantly impact SOX compliance requirements going forward.",
+    date: "Feb 20, 2025",
+    category: "SOX",
+    readTime: "12 min read",
+    image: "/images/sox-compliance.png"
+  },
+  {
     id: 1,
     title: "AI-Powered SOX Compliance: A Complete Guide",
     excerpt: "Learn how artificial intelligence is transforming SOX compliance processes and documentation.",
@@ -42,26 +51,28 @@ export default function ArticlesPage() {
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <div key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-cyan-600 px-3 py-1 bg-cyan-50 rounded-full">{article.category}</span>
-                  <span className="text-sm text-teal-700">{article.readTime}</span>
+            <a href={`/articles/${article.id}`} key={article.id} className="block">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
-                <h2 className="text-xl font-bold text-teal-900 mb-2 group-hover:text-cyan-600 transition-colors">{article.title}</h2>
-                <p className="text-teal-700 mb-4">{article.excerpt}</p>
-                <span className="text-sm text-teal-600">{article.date}</span>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-cyan-600 px-3 py-1 bg-cyan-50 rounded-full">{article.category}</span>
+                    <span className="text-sm text-teal-700">{article.readTime}</span>
+                  </div>
+                  <h2 className="text-xl font-bold text-teal-900 mb-2 group-hover:text-cyan-600 transition-colors">{article.title}</h2>
+                  <p className="text-teal-700 mb-4">{article.excerpt}</p>
+                  <span className="text-sm text-teal-600">{article.date}</span>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
