@@ -1,11 +1,9 @@
+'use client';
+
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
-// This type defines the expected parameters
-type Props = {
-  params: { id: string }
-}
-
-// Add this type definition
+// Article type definition
 type ArticleType = {
   title: string;
   date: string;
@@ -72,11 +70,12 @@ Sources:
 2. https://kpmg.com/us/en/articles/2024/sec-2025-priorities-examinations-and-perspectives-reg-alert.html
 3. https://www.sec.gov/newsroom/press-releases/2024-172`
   }
-  // Add other articles here
 };
 
-export default function ArticlePage({ params }: Props) {
-  const article = articlesDb[params.id];
+export default function ArticlePage() {
+  const pathname = usePathname();
+  const id = pathname?.split('/').pop() || '';
+  const article = articlesDb[id];
 
   if (!article) {
     return <div className="max-w-3xl mx-auto px-4 py-16">Article not found</div>;
