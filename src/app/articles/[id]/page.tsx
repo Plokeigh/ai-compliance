@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 // Article type definitions
 type ArticleType = {
@@ -128,7 +129,18 @@ Sources:
   };
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-16">
+    <article className="max-w-4xl mx-auto px-4 py-8">
+      {/* Increased height from h-48 to h-56 */}
+      <div className="relative h-56 mb-8 rounded-lg overflow-hidden bg-white shadow-sm">
+        <Image
+          src="/images/sec-logo4.png"
+          alt="SEC Logo"
+          fill
+          className="object-contain p-4"
+          priority
+        />
+      </div>
+      
       <h1 className="text-4xl font-bold mb-4 text-gray-900">{article.title}</h1>
       <div className="text-sm text-gray-500 mb-8">{article.date}</div>
       <div className="prose prose-lg max-w-none">

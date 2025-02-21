@@ -6,11 +6,11 @@ const articles = [
   {
     id: "sec-sox-2025",
     title: "How Recent SEC Pronouncements Will Shape SOX Compliance in 2025",
-    excerpt: "The Securities and Exchange Commission (SEC) has made several key pronouncements over the past year that will significantly impact SOX compliance requirements going forward.",
+    excerpt: "The Securities and Exchange Commission (SEC) has made several key pronouncements over the past year that may significantly impact SOX compliance requirements going forward.",
     date: "Feb 20, 2025",
     category: "SOX",
     readTime: "12 min read",
-    image: "/images/sec-logo.png"
+    image: "/images/sec-logo4.png"
   },
   {
     id: 1,
@@ -53,7 +53,7 @@ export default function ArticlesPage() {
           {articles.map((article) => (
             <a href={`/articles/${article.id}`} key={article.id} className="block">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48 w-full">
+                <div className="relative h-56 w-full">
                   <Image
                     src={article.image}
                     alt={article.title}
