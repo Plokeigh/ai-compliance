@@ -91,11 +91,13 @@ export default function HomePage() {
           <div className="bg-white rounded-lg shadow-lg p-6 px-8 hover:shadow-xl transition-shadow duration-300 min-h-[280px]">
             <h2 className="text-2xl font-bold text-teal-900 mb-6">Articles</h2>
             <div className="space-y-6">
-              <div className="group cursor-pointer">
-                <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">AI in Compliance: 2025 Trends</h3>
-                <p className="text-teal-700 mt-2">Explore the latest trends in AI-powered compliance solutions.</p>
-                <div className="mt-2 w-16 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </div>
+              <Link href="/articles/sec-sox-2025" className="block">
+                <div className="group cursor-pointer">
+                  <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">How Recent SEC Pronouncements Will Shape SOX Compliance in 2025</h3>
+                  <p className="text-teal-700 mt-2">Key updates on cybersecurity, AI, and crypto regulations affecting SOX compliance.</p>
+                  <div className="mt-2 w-16 h-1 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+              </Link>
               <div className="group cursor-pointer">
                 <h3 className="font-semibold text-teal-900 group-hover:text-cyan-600 transition-colors">Best Practices Guide</h3>
                 <p className="text-teal-700 mt-2">Key considerations for implementing AI in your compliance program.</p>

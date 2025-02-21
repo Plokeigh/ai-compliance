@@ -10,7 +10,7 @@ const articles = [
     date: "Feb 20, 2025",
     category: "SOX",
     readTime: "12 min read",
-    image: "/images/sox-compliance.png"
+    image: "/images/sec-logo.png"
   },
   {
     id: 1,
