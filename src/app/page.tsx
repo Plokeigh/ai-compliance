@@ -22,8 +22,8 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="relative max-w-7xl pl-8 pr-4 sm:pr-6 lg:pr-8 py-24">
-          <div className="text-left max-w-4xl">
+        <div className="relative max-w-7xl mx-auto pl-8 pr-4 sm:pr-6 lg:pr-8 py-24 flex justify-center items-center min-h-[45vh]">
+          <div className="text-center max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-teal-900 mb-5 leading-tight">
               Transform Your Compliance
               <span className="text-cyan-600 block mt-2">with AI Innovation</span>
