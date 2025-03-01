@@ -1,12 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-// Article type definitions
-type ArticleType = {
-  title: string;
-  date: string;
-  content: string;
-}
+// Article type definition removed
 
 const ArticlePage = () => {
   const article = {
